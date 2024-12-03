@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #85ACD6;
+}
+
+#load {
+  text-align: center;
+}
+
+#container {
+  text-align: center;
+  width: 50%;
+  height: 100vh;
+  margin: 30px auto;
+}
+
+h1 {
+  color: #9E231F;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  border-radius: 20px;
+  margin: 10px;
+  background-color: #F7EEE1;
+  color: black;
+  font-size: 1.2rem;
+  line-height: 40px;
+  border: 2px solid #D57171;
+}
+
+.btn {
+  height: 60px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
