@@ -1,4 +1,5 @@
-const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail'
+const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail';
+const ul = document.querySelector('.email-list');
 
 // array vuoto per le 10 email random
 let emailArray = [];
@@ -8,19 +9,24 @@ let counter = 0;
 function email() {
   axios.get(endpoint)
     .then(response => {
-      emailArray.push(response.data.response)
+      emailArray.push(response.data.response);
       counter++;
+
       if (counter === 10) {
+        emailArray.forEach(email => {
+          const li = document.createElement('li');
+          li.innerHTML = email;
+          ul.appendChild(li);
+        });
         console.log(emailArray);
       }
     })
     .catch(err => {
-      console.log(`Errore nella richiesta dell\'email:`, err);
+      console.log(`Errore nella richiesta dell'email:`, err);
     });
 }
 
 // chiamata alla funzione per ottenere la risposta HTTP
 for (let i = 0; i < 10; i++) {
-  email()
+  email();
 }
-
